@@ -1,0 +1,665 @@
+{
+ "name": "Final Fight",
+ "name_ko": "파이널 파이트",
+ "exe": "mame.exe",
+ "engine": "mame",
+ "install": {"mame": "mods/mame"},
+ "roms": [
+  "ffight"
+ ],
+ "event_file": "C:\\Users\\Public\\dshaptics\\events_mame.log",
+ "mame": {
+  "main_cpu": ":maincpu",
+  "sound_command": [
+   "800180",
+   "800187"
+  ],
+  "sound_idle": "ff",
+  "sound_fade": [
+   "800188",
+   "80018f"
+  ],
+  "oki": {
+   "cpu": ":audiocpu",
+   "addr": "f002"
+  },
+  "log_oki": false,
+  "watch": {
+   "p1_weapon": [
+    "ff85b2",
+    1
+   ],
+   "p2_weapon": [
+    "ff8672",
+    1
+   ],
+   "p1_state": [
+    "ff856b",
+    1
+   ],
+   "p1_energy": [
+    "ff8581",
+    1,
+    "level",
+    144
+   ],
+   "p2_state": [
+    "ff862b",
+    1
+   ],
+   "p2_energy": [
+    "ff8641",
+    1,
+    "level",
+    144
+   ]
+  },
+  "buttons": {
+   "p1_attack": "P1 Button 1",
+   "p2_attack": "P2 Button 1"
+  },
+  "owner": {
+   "swing": "^snd:(2f|0e|05|1b|08|0c|1c|1d)$",
+   "press_delay": 2,
+   "press_slack": 10,
+   "hit": "^snd:(00|01|02|03|09|06|10|0f|1f)$",
+   "hit_window": 20,
+   "hurt": "^snd:(00|01|06)$",
+   "hurt_window": 3
+  }
+ },
+ "source": {
+  "type": "mame_oki",
+  "rom": "ffight",
+  "files": [
+   "ff_18.11c",
+   "ff_19.12c"
+  ],
+  "rate": 7575,
+  "spk": "spk",
+  "hap": "hap"
+ },
+ "_labels": {
+  "snd:2f": "펀치 휘두름",
+  "snd:00": "주먹 적중(가벼운 타격, 맞을 때도 같은 소리)",
+  "snd:01": "킥·강한 타격 적중",
+  "snd:02": "연타 마무리 타격(1회 관찰)",
+  "snd:1f": "쇠파이프로 사람을 때림(추정, 1회 화면)",
+  "snd:2e": "OH! MY GOD!! (차 주인, 보너스 스테이지 끝)",
+  "snd:23": "내 캐릭터가 크게 맞는 목소리(추정)",
+  "snd:2b": "큰 적 쓰러지는 목소리(추정)",
+  "snd:05": "점프 공격 휘두름(가이)",
+  "snd:1b": "점프 공격 휘두름(코디)",
+  "snd:08": "점프 공격 휘두름(해거)",
+  "snd:0c": "필살기 휘두름(가이)",
+  "snd:1c": "필살기 휘두름(코디)",
+  "snd:1d": "필살기 휘두름(해거, 더블 래리어트)",
+  "snd:03": "잡고 때리기 적중(코디 무릎, 해거 박치기 - 추정)",
+  "snd:09": "해거 잡아 메치기(03 뒤 10프레임에 3연속 - 추정)",
+  "snd:06": "묵직한 타격(내가 맞을 때, 해거가 때릴 때)",
+  "snd:0d": "몸이 바닥에 떨어지는 쿵",
+  "snd:16": "전화부스 부서짐, 차 부품 떨어져 나감",
+  "snd:17": "문 부서짐",
+  "snd:18": "드럼통·나무 부서짐, 보너스 스테이지 차 때리기",
+  "snd:40": "부서진 조각 떨어짐(1회 관찰)",
+  "snd:2c": "적 쓰러지는 비명",
+  "snd:22": "내 캐릭터 쓰러지는 비명",
+  "snd:26": "내 캐릭터 맞는 소리(추정)",
+  "snd:29": "적 목소리(추정)",
+  "snd:28": "담드 웃음(오프닝)",
+  "snd:04": "적을 잡는 소리(화면 확인. '무기 떨어짐' 아님)",
+  "snd:3f": "미확인(샘플 64, 1초)",
+  "snd:3b": "GO 안내음",
+  "snd:5f": "코인",
+  "snd:3a": "선택 확정",
+  "snd:38": "컨티뉴 카운트다운",
+  "snd:37": "컨티뉴 화면",
+  "snd:53": "컨티뉴 음악",
+  "snd:51": "게임 오버",
+  "snd:50": "스테이지 음악",
+  "snd:55": "캐릭터 선택 음악",
+  "snd:41": "구역 전환 음악",
+  "snd:19": "드럼통 구르고 부딪힘",
+  "snd:10": "칼 적중(화면 확인)",
+  "snd:14": "화염병 불길",
+  "snd:2d": "보스 쓰러지는 비명",
+  "snd:1a": "소돔 등장 목소리",
+  "snd:11": "던지기·날아가는 휙(추정)",
+  "snd:0e": "무기 휘두름(칼 찌르기·쇠파이프, 화면 확인)",
+  "snd:0f": "짧고 날카로운 쨍 - 쇠파이프가 차·단단한 것에 맞음(추정)",
+  "snd:57": "스테이지 클리어",
+  "snd:42": "지도 화면",
+  "snd:4c": "보너스 스테이지 시작",
+  "snd:33": "지하철 음악",
+  "snd:34": "열차 소리(승강장에 열차가 들어올 때, 열차에 올라탈 때). 음악이 아님",
+  "snd:43": "링 음악"
+ },
+ "master": 1.0,
+ "rough": {
+  "weapon_swing": "swing_l",
+  "train": "tram",
+  "swing": "swing",
+  "kick_swing": "swing",
+  "special": "swing_l",
+  "hit": "hit",
+  "hit_heavy": "hit_m",
+  "struck": "hit",
+  "wood": "hit_wood",
+  "metal": "hit_metal",
+  "grab": "hand",
+  "hurt": "hit",
+  "tick": "button",
+  "blade": "stab",
+  "fire": "fire",
+  "bodyfall": "down",
+  "throw": "move_large",
+  "debris": "drop",
+  "boss_down": "knockdown",
+  "land": "land"
+ },
+ "style": {"rough": "hit", 
+  "hit": "sb",
+  "top": "hit_heavy|special|fire|^snd:(01|02|03|09|1f|14)$|boss_down",
+  "top_ms": 60,
+  "skip": "^throw$|^land$|^debris$|^bodyfall$",
+  "sizes": [
+   [
+    "boss_down",
+    {
+     "tail_s": 2.4,
+     "tail": 0.3,
+     "hz": 40,
+     "top_ms": 140
+    }
+   ],
+   [
+    "^fire$|^snd:14$",
+    {
+     "hz": 45,
+     "tail_s": 2.0,
+     "tail": 0.3
+    }
+   ],
+   [
+    "^metal$|^snd:(16|0f)$",
+    {
+     "hz": 72,
+     "keep": 0.8
+    }
+   ],
+   [
+    "^wood$|^snd:(17|18|19)$",
+    {
+     "hz": 66,
+     "ms": 20
+    }
+   ],
+   [
+    "^blade$|^snd:10$",
+    {
+     "hz": 72,
+     "ms": 14,
+     "keep": 0.8
+    }
+   ],
+   [
+    "hit_heavy|^snd:(01|02|03|09|1f)$",
+    {
+     "hz": 40
+    }
+   ],
+   [
+    "^hit$|^snd:00$",
+    {
+     "hz": 62,
+     "ms": 18
+    }
+   ],
+   [
+    "^struck$|^hurt$|^snd:06$",
+    {
+     "hz": 46,
+     "ms": 35
+    }
+   ]
+  ]
+ },
+ "duck": 0.3,
+ "gap": 0.03,
+ "recipes": "recipes.json",
+ "clips": {
+  "trees": "trees.json",
+  "spk": "spk",
+  "hap": "hap"
+ },
+ "speaker": {
+  "all": false,
+  "allow": "^snd:(0c|1c|1d|2e)$",
+  "gain": 0.25,
+  "lowcut_hz": [
+   150,
+   300
+  ],
+  "bass": 0.2,
+  "layers": [
+   {
+    "layers": "speaker_layers.json",
+    "dir": "spk"
+   }
+  ]
+ },
+ "waves": {
+  "weapon_swing": [
+   [
+    250,
+    40,
+    0.4,
+    18
+   ],
+   [
+    180,
+    70,
+    0.28,
+    35
+   ]
+  ],
+  "train": [
+   {
+    "swell": [
+     40,
+     700,
+     0.3
+    ]
+   },
+   {
+    "swell": [
+     42,
+     700,
+     0.5
+    ]
+   },
+   {
+    "swell": [
+     46,
+     800,
+     0.7
+    ]
+   },
+   {
+    "swell": [
+     44,
+     800,
+     0.55
+    ]
+   },
+   {
+    "swell": [
+     40,
+     900,
+     0.35
+    ]
+   },
+   {
+    "swell": [
+     38,
+     900,
+     0.2
+    ]
+   }
+  ],
+  "swing": [
+   [
+    170,
+    28,
+    0.16,
+    12
+   ]
+  ],
+  "kick_swing": [
+   [
+    130,
+    45,
+    0.24,
+    20
+   ]
+  ],
+  "special": [
+   [
+    150,
+    60,
+    0.4,
+    30
+   ],
+   20,
+   [
+    150,
+    60,
+    0.35,
+    30
+   ],
+   20,
+   [
+    150,
+    60,
+    0.3,
+    30
+   ]
+  ],
+  "hit": [
+   [
+    230,
+    10,
+    0.9,
+    5
+   ],
+   [
+    95,
+    45,
+    0.8,
+    22
+   ]
+  ],
+  "hit_heavy": [
+   [
+    200,
+    12,
+    1.0,
+    6
+   ],
+   [
+    70,
+    80,
+    1.0,
+    35
+   ]
+  ],
+  "struck": [
+   [
+    60,
+    110,
+    1.0,
+    50
+   ]
+  ],
+  "wood": [
+   [
+    240,
+    14,
+    0.9,
+    6
+   ],
+   [
+    120,
+    30,
+    0.7,
+    14
+   ],
+   12,
+   [
+    80,
+    90,
+    0.8,
+    45
+   ]
+  ],
+  "metal": [
+   [
+    320,
+    12,
+    0.9,
+    5
+   ],
+   [
+    180,
+    40,
+    0.8,
+    30
+   ],
+   10,
+   [
+    90,
+    80,
+    0.7,
+    40
+   ]
+  ],
+  "grab": [
+   [
+    160,
+    18,
+    0.6,
+    8
+   ],
+   8,
+   [
+    110,
+    30,
+    0.5,
+    15
+   ]
+  ],
+  "hurt": [
+   [
+    58,
+    100,
+    0.9,
+    48
+   ]
+  ],
+  "tick": [
+   [
+    300,
+    14,
+    0.35,
+    6
+   ]
+  ],
+  "blade": [
+   [
+    380,
+    8,
+    0.9,
+    4
+   ],
+   [
+    160,
+    35,
+    0.6,
+    16
+   ]
+  ],
+  "fire": [
+   {
+    "swell": [
+     65,
+     240,
+     0.8
+    ]
+   },
+   [
+    210,
+    10,
+    0.3,
+    5
+   ],
+   15,
+   [
+    260,
+    8,
+    0.25,
+    4
+   ],
+   20,
+   [
+    190,
+    10,
+    0.2,
+    5
+   ],
+   25,
+   [
+    240,
+    8,
+    0.15,
+    4
+   ]
+  ],
+  "bodyfall": [
+   [
+    55,
+    120,
+    0.45,
+    55
+   ]
+  ],
+  "throw": [
+   [
+    140,
+    90,
+    0.22,
+    45
+   ]
+  ],
+  "debris": [
+   [
+    260,
+    8,
+    0.3,
+    4
+   ],
+   30,
+   [
+    220,
+    8,
+    0.2,
+    4
+   ]
+  ],
+  "boss_down": [
+   [
+    60,
+    60,
+    1.0,
+    30
+   ],
+   40,
+   [
+    42,
+    600,
+    0.9,
+    300
+   ]
+  ],
+  "land": [
+   [
+    70,
+    50,
+    0.28,
+    22
+   ]
+  ]
+ },
+ "triggers": {
+  "weapon": {
+   "preset": "melee_blade",
+   "match": "^ram:p\\d_weapon:\\w+>01$",
+   "until": "^ram:p\\d_weapon:"
+  }
+ },
+ "rules": [
+  {
+   "match": "^snd:34$",
+   "wave": "train"
+  },
+  {
+   "match": "^ram:p\\d_energy:down$",
+   "wave": "hurt",
+   "per": 16
+  },
+  {
+   "match": "^snd:2f$",
+   "wave": "swing"
+  },
+  {
+   "match": "^snd:(05|1b|08)$",
+   "wave": "kick_swing"
+  },
+  {
+   "match": "^snd:(0c|1c|1d)$",
+   "wave": "special"
+  },
+  {
+   "match": "^snd:00$",
+   "wave": "hit"
+  },
+  {
+   "match": "^snd:0[1239]$",
+   "wave": "hit_heavy"
+  },
+  {
+   "match": "^snd:06$",
+   "wave": "struck"
+  },
+  {
+   "match": "^snd:1[78]$",
+   "wave": "wood"
+  },
+  {
+   "match": "^snd:16$",
+   "wave": "metal"
+  },
+  {
+   "match": "^snd:(5f|38)$",
+   "wave": "tick"
+  },
+  {
+   "match": "^snd:10$",
+   "wave": "blade"
+  },
+  {
+   "match": "^snd:14$",
+   "wave": "fire"
+  },
+  {
+   "match": "^snd:04$",
+   "wave": "grab"
+  },
+  {
+   "match": "^snd:0e$",
+   "wave": "weapon_swing"
+  },
+  {
+   "match": "^snd:0f$",
+   "wave": "metal"
+  },
+  {
+   "match": "^snd:1f$",
+   "wave": "hit_heavy"
+  },
+  {
+   "match": "^snd:19$",
+   "wave": "wood"
+  },
+  {
+   "match": "^snd:0d$",
+   "wave": "bodyfall",
+   "gap": 0.12
+  },
+  {
+   "match": "^snd:11$",
+   "wave": "throw"
+  },
+  {
+   "match": "^snd:40$",
+   "wave": "debris"
+  },
+  {
+   "match": "^snd:2d$",
+   "wave": "boss_down"
+  },
+  {
+   "match": "^ram:p\\d_state:\\w+>12$",
+   "wave": "land"
+  }
+ ]
+}
