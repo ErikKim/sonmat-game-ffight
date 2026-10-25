@@ -3,7 +3,6 @@
  "name_ko": "파이널 파이트",
  "exe": "mame.exe",
  "engine": "mame",
- "install": {"mame": "mods/mame"},
  "roms": [
   "ffight"
  ],
